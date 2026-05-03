@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Myanmar Gold 8 VIP - Club388® & Batman688® Agent</title>
+    
+    <link rel="dns-prefetch" href="https://6tjzk.bemobtrcks.com">
+    <link rel="preconnect" href="https://6tjzk.bemobtrcks.com">
+
+    <style>
+        :root { 
+            --gold: #d4af37; --gold-light: #f9edbe; --gold-bright: #fff9e6;
+            --gold-dark: #8a6d3b; --tg-blue: #24A1DE; --viber-purple: #7360f2;
+        }
+        
+        body { 
+            background: radial-gradient(circle at center, #1a1a1a 0%, #000 100%); 
+            color: #fff; font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            display: flex; justify-content: center; align-items: center; 
+            min-height: 100vh; margin: 0; overflow: hidden;
+        }
+
+        .foreground-coins { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 999; perspective: 1000px; }
+        .coin { position: absolute; top: -60px; width: 36px; height: 36px; transform-style: preserve-3d; animation: fall-slow linear forwards; }
+        .coin-inner { position: relative; width: 100%; height: 100%; transform-style: preserve-3d; animation: rotate-flat 4s linear infinite; }
+        .face { position: absolute; width: 100%; height: 100%; border-radius: 50%; background: radial-gradient(circle at 35% 35%, var(--gold-bright) 0%, var(--gold) 50%, var(--gold-dark) 100%); border: 1px solid rgba(255, 255, 255, 0.4); display: flex; align-items: center; justify-content: center; box-shadow: inset 0 0 6px rgba(0,0,0,0.4); backface-visibility: hidden; }
+        .face::after { content: "MMK"; font-size: 11px; font-weight: 900; color: #5c441a; }
+        .side { position: absolute; width: 100%; height: 100%; border-radius: 50%; background: repeating-conic-gradient(from 0deg, var(--gold-dark) 0deg 3deg, var(--gold-bright) 3deg 6deg); transform: translateZ(-1px); }
+        .front { transform: translateZ(1px); } .back { transform: translateZ(-1px) rotateY(180deg); }
+
+        @keyframes rotate-flat { 0% { transform: rotateZ(0deg); } 100% { transform: rotateZ(360deg); } }
+        @keyframes fall-slow { 0% { transform: translateY(0); opacity: 0; } 10% { opacity: 1; } 100% { transform: translateY(115vh); opacity: 1; } }
+
+        .card { position: relative; background: rgba(18, 18, 18, 0.98); width: 92%; max-width: 380px; padding: 4px; border-radius: 35px; text-align: center; overflow: hidden; border: 1px solid rgba(212, 175, 55, 0.3); z-index: 10; box-shadow: 0 10px 30px rgba(0,0,0,0.8); }
+        .card::before { content: ""; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: conic-gradient(transparent, transparent, transparent, var(--gold)); animation: rotate-border 4s linear infinite; z-index: -1; }
+        @keyframes rotate-border { 100% { transform: rotate(360deg); } }
+        .card-inner { background: #121212; border-radius: 32px; padding: 20px 12px; }
+
+        /* 跑马灯样式 - 增加边距优化位置布局[cite: 1] */
+        .top-ticker { background: rgba(212, 175, 55, 0.08); border: 1px solid rgba(212, 175, 55, 0.25); border-radius: 50px; margin-top: 5px; margin-bottom: 18px; padding: 5px 0; overflow: hidden; position: relative; display: flex; }
+        .ticker-move { display: inline-block; white-space: nowrap; animation: tickerInfinite 65s linear infinite; color: var(--gold-light); font-size: 11px; font-weight: bold; will-change: transform; }
+        @keyframes tickerInfinite { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+
+        .logo-area { position: relative; width: 100px; height: 100px; margin: 0 auto 10px; animation: breathe 3s ease-in-out infinite; }
+        @keyframes breathe { 0%, 100% { transform: scale(1); filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.4)); } 50% { transform: scale(1.04); filter: drop-shadow(0 0 20px rgba(212, 175, 55, 0.7)); } }
+        .logo { width: 100%; height: 100%; border-radius: 20px; overflow: hidden; border: 2px solid var(--gold); background: #1a1a1a; }
+        .logo img { width: 100%; height: 100%; object-fit: cover; }
+        
+        h1 { font-size: 20px; color: var(--gold); margin: 5px 0; font-weight: 800; }
+        .status { font-size: 11px; color: #44eb87; display: flex; align-items: center; justify-content: center; gap: 5px; margin-bottom: 15px; }
+        .dot { width: 7px; height: 7px; background: #00c853; border-radius: 50%; box-shadow: 0 0 8px #00c853; animation: blink-dot 1.2s infinite ease-in-out; }
+        @keyframes blink-dot { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+
+        .game-row { display: flex; justify-content: center; gap: 10px; margin-bottom: 15px; }
+        .game-box { width: 75px; height: 75px; background: #000; border-radius: 15px; border: 1px solid rgba(212, 175, 55, 0.4); display: flex; align-items: center; justify-content: center; overflow: hidden; }
+        .game-box img { width: 100%; height: 100%; }
+
+        .pay-row { display: flex; justify-content: center; gap: 8px; margin-bottom: 12px; }
+        .pay-box { flex: 1; display: flex; flex-direction: column; align-items: center; background: rgba(255,255,255,0.03); padding: 8px 2px; border-radius: 15px; border: 1px solid rgba(255,255,255,0.08); font-size: 12px; }
+        .pay-icon-wrapper { width: 45px; height: 45px; border-radius: 10px; overflow: hidden; margin-bottom: 4px; background: #fff; }
+        .pay-icon-wrapper img { width: 100%; height: 100%; object-fit: cover; }
+
+        /* 金黄大幅度呼吸效果[cite: 1] */
+        .urgency-alert {
+            background: linear-gradient(135deg, #b31217 0%, #e52d27 100%);
+            border: 1px solid var(--gold);
+            color: var(--gold-bright);
+            font-size: 15px;
+            font-weight: 900;
+            padding: 10px 5px;
+            border-radius: 12px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(229, 45, 39, 0.4);
+            text-shadow: 0 0 8px rgba(255, 249, 230, 0.6);
+            animation: big-breathe 2s infinite ease-in-out;
+        }
+        @keyframes big-breathe {
+            0%, 100% { transform: scale(0.95); filter: brightness(1); }
+            50% { transform: scale(1.08); filter: brightness(1.3); }
+        }
+
+        .btn-group { display: flex; flex-direction: row; gap: 8px; justify-content: center; }
+        .btn { 
+            flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; 
+            text-decoration: none; padding: 10px 5px; border-radius: 18px; 
+            color: white; transition: 0.2s; border: 1.5px solid rgba(255,255,255,0.3);
+        }
+        .btn img { width: 40px; height: 40px; margin-bottom: 5px; object-fit: contain; }
+        .btn-main { font-weight: bold; font-size: 13px; text-align: center; line-height: 1.2; }
+        .btn-tg { background: linear-gradient(180deg, #24A1DE, #1c82b6); }
+        .btn-viber { background: linear-gradient(180deg, #7360f2, #5d4ed1); }
+        .btn:active { transform: scale(0.95); }
+
+        .notice { margin-top: 15px; font-size: 10px; color: #777; line-height: 1.4; }
+        .brand-bold { color: var(--gold-light); font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div class="foreground-coins" id="coin-canvas"></div>
+    <div class="card">
+        <div class="card-inner">
+            <!-- 头部 Logo 与标题 -->
+            <div class="logo-area">
+                <div class="logo"><img src="logo.webp" alt="Logo"></div>
+            </div>
+            <h1>Gold 8 VIP Service</h1>
+            <div class="status"><span class="dot"></span><span>Online - အခုဆက်သွယ်နိုင်ပါသည်</span></div>
+            
+            <!-- 游戏图标 -->
+            <div class="game-row">
+                <div class="game-box"><img src="club388.webp" alt="C388"></div>
+                <div class="game-box"><img src="batman688.webp" alt="B688"></div>
+            </div>
+
+            <!-- 支付方式图标 -->
+            <div class="pay-row">
+                <div class="pay-box"><div class="pay-icon-wrapper"><img src="Kpay.webp" alt="KPay"></div><strong>KBZPay</strong></div>
+                <div class="pay-box"><div class="pay-icon-wrapper"><img src="WavePay.webp" alt="WPay"></div><strong>WavePay</strong></div>
+            </div>
+
+            <!-- 移动至此：中奖信息跑马灯[cite: 1] -->
+            <div class="top-ticker">
+                <div class="ticker-move" id="winners-list"></div>
+            </div>
+
+            <!-- 呼吸优惠提示 -->
+            <div class="urgency-alert">🔥 NEW MEMBERS BONUS -100% 🔥</div>
+
+            <!-- 并列按钮组 -->
+            <div class="btn-group">
+                <a href="https://6tjzk.bemobtrcks.com/click/1" class="btn btn-tg">
+                    <img src="telegram.webp" alt="TG">
+                    <span class="btn-main">Telegram<br>ဆက်သွယ်ရန်</span>
+                </a>
+                <a href="https://6tjzk.bemobtrcks.com/click/2" class="btn btn-viber">
+                    <img src="viber.webp" alt="Viber">
+                    <span class="btn-main">Viber<br>ဆက်သွယ်ရန်</span>
+                </a>
+            </div>
+
+            <div class="notice">
+                <span class="brand-bold">Club388®</span> & <span class="brand-bold">Batman688®</span> Partner<br>Safe & Fast Service in Myanmar
+            </div>
+        </div>
+    </div>
+    <script>
+        const mimes = ['097', '099', '094', '092', '098', '096'];
+        const timeTexts = ['ယခုလေးတင်', '1 မိနစ်ခန့်က', '3 မိနစ်ခန့်က'];
+        function initTicker() {
+            let baseText = "";
+            for(let i=0; i<15; i++) {
+                let phone = mimes[Math.floor(Math.random()*mimes.length)] + "****" + Math.floor(Math.random()*999);
+                let amount = (Math.floor(Math.random() * 50) + 5) * 10000;
+                baseText += `<span> 💰 [${timeTexts[Math.floor(Math.random()*timeTexts.length)]}] [${phone}] သည် ${amount.toLocaleString()} MMK အနိုင်ရရှိသွားပါသည်။ &nbsp;&nbsp;&nbsp;&nbsp;</span>`;
+            }
+            document.getElementById('winners-list').innerHTML = baseText + baseText;
+        }
+        initTicker();
+        function createCoins() {
+            const container = document.getElementById('coin-canvas');
+            for (let i = 0; i < 6; i++) { spawnCoin(container, Math.random() * 5); }
+        }
+        function spawnCoin(container, delay = 0) {
+            const coin = document.createElement('div');
+            coin.className = 'coin';
+            coin.style.left = Math.random() * 100 + '%';
+            coin.style.animationDelay = delay + 's';
+            coin.style.animationDuration = (5 + Math.random() * 5) + 's';
+            coin.innerHTML = `<div class="coin-inner"><div class="face front"></div><div class="face back"></div><div class="side"></div></div>`;
+            container.appendChild(coin);
+            coin.addEventListener('animationend', () => { coin.remove(); spawnCoin(container, 0); });
+        }
+        createCoins();
+    </script>
+</body>
+</html>
