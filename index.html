@@ -36,11 +36,13 @@
             padding: 20px;
         }
 
-        .logo-container { text-align: center; margin-bottom: 20px; animation: fadeIn 1s ease-in; }
-        .main-logo { height: 110px; object-fit: contain; filter: drop-shadow(0 0 15px rgba(251, 192, 45, 0.4)); }
+        /* 顶部主 Logo */
+        .logo-container { text-align: center; margin-bottom: 15px; animation: fadeIn 1s ease-in; }
+        .main-logo { height: 90px; object-fit: contain; filter: drop-shadow(0 0 15px rgba(251, 192, 45, 0.4)); }
 
+        /* 进度条 */
         .progress-container {
-            width: 100%; background: #2c2c35; border-radius: 10px; height: 12px; margin-bottom: 30px;
+            width: 100%; background: #2c2c35; border-radius: 10px; height: 10px; margin-bottom: 25px;
             overflow: hidden; box-shadow: inset 0 2px 5px rgba(0,0,0,0.5);
             border: 1px solid rgba(255,255,255,0.1);
         }
@@ -51,35 +53,39 @@
             box-shadow: 0 0 10px rgba(251, 192, 45, 0.6);
         }
 
+        /* 问卷卡片 */
         .quiz-card {
             background: rgba(255, 255, 255, 0.03);
             border: 1px solid rgba(251, 192, 45, 0.2);
             border-radius: 20px;
-            padding: 30px 20px;
+            padding: 25px 20px;
             box-shadow: 0 15px 35px rgba(0,0,0,0.5);
             display: flex;
             flex-direction: column;
             align-items: center;
             text-align: center;
             position: relative;
-            min-height: 300px;
+            min-height: 320px;
         }
+
+        /* 卡片内嵌迷你 Logo */
+        .card-inner-logo { height: 45px; object-fit: contain; margin-bottom: 20px; opacity: 0.9; }
 
         .step { display: none; width: 100%; animation: slideIn 0.4s forwards; }
         .step.active { display: block; }
-        .step-title { font-size: 20px; color: #fff; margin-bottom: 12px; line-height: 1.4; font-weight: bold;}
+        .step-title { font-size: 19px; color: #fff; margin-bottom: 15px; line-height: 1.4; font-weight: bold;}
         .step-title span { color: var(--gold); }
 
         .quiz-btn {
             width: 100%; background: #1c1c24; border: 2px solid rgba(255,255,255,0.1);
-            color: #fff; padding: 15px; border-radius: 12px; font-size: 16px; font-weight: bold;
+            color: #fff; padding: 14px; border-radius: 12px; font-size: 16px; font-weight: bold;
             margin-bottom: 12px; cursor: pointer; transition: 0.2s;
             display: flex; align-items: center; justify-content: center; gap: 10px;
         }
         .quiz-btn:active { transform: scale(0.96); background: rgba(251, 192, 45, 0.2); border-color: var(--gold); }
-        .quiz-btn img { height: 24px; border-radius: 4px; }
+        .quiz-btn img { height: 22px; border-radius: 4px; }
 
-        .loading-step { display: none; flex-direction: column; align-items: center; justify-content: center; height: 100%; }
+        .loading-step { display: none; flex-direction: column; align-items: center; justify-content: center; height: 100%; padding: 40px 0; }
         .spinner {
             width: 50px; height: 50px; border: 5px solid rgba(251, 192, 45, 0.2);
             border-top: 5px solid var(--gold); border-radius: 50%;
@@ -88,16 +94,16 @@
         .loading-text { font-size: 16px; color: var(--gold); font-weight: bold; animation: pulse 1.5s infinite; }
 
         .result-step { display: none; width: 100%; flex-direction: column; align-items: center; animation: popIn 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
-        .success-icon { width: 60px; height: 60px; background: #4caf50; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 30px; margin-bottom: 15px; box-shadow: 0 0 20px rgba(76, 175, 80, 0.5); color: white;}
-        .result-title { font-size: 22px; margin-bottom: 10px; line-height: 1.3;}
+        .success-icon { width: 55px; height: 55px; background: #4caf50; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 28px; margin-bottom: 15px; box-shadow: 0 0 20px rgba(76, 175, 80, 0.5); color: white;}
+        .result-title { font-size: 20px; margin-bottom: 10px; line-height: 1.3;}
         .result-subtitle { font-size: 15px; color: #4caf50; font-weight: bold; margin-bottom: 25px;}
 
         .action-area { width: 100%; }
-        .btn-group { display: flex; gap: 15px; justify-content: center; }
+        .btn-group { display: flex; gap: 12px; justify-content: center; }
         .btn { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; text-decoration: none; padding: 12px 5px; border-radius: 16px; color: white; border: 1px solid rgba(255,255,255,0.15); box-shadow: 0 8px 20px rgba(0,0,0,0.5); position: relative; overflow: hidden;}
         .btn-tg { background: linear-gradient(135deg, #1c82b6, #24A1DE); }
         .btn-viber { background: linear-gradient(135deg, #5d4ed1, #7360f2); }
-        .btn img { width: 45px; height: 45px; margin-bottom: 6px; object-fit: contain; z-index: 2;}
+        .btn img { width: 40px; height: 40px; margin-bottom: 6px; object-fit: contain; z-index: 2;}
         .tg-fix { transform: scale(1.15); } 
         .viber-fix { transform: scale(1.25); }
         .btn span.main { font-weight: 800; font-size: 14px; z-index: 2; text-shadow: 0 2px 4px rgba(0,0,0,0.3);}
@@ -118,27 +124,36 @@
 <body>
 
     <div class="wrapper">
+        <!-- 外部主 Logo -->
         <div class="logo-container">
             <img src="logo.webp" alt="VIP Logo" class="main-logo">
         </div>
 
+        <!-- 进度条 -->
         <div class="progress-container">
             <div class="progress-bar" id="progressBar"></div>
         </div>
 
         <div class="quiz-card">
+            
+            <!-- 卡片内常驻迷你 Logo (用于增强审核权威感) -->
+            <img src="logo.webp" alt="Logo" class="card-inner-logo" id="innerLogo">
+
+            <!-- 问题 1 -->
             <div class="step active" id="step1">
                 <div class="step-title">မေးခွန်း 1/3: သင်၏ အသက်သည် <span>၁၈ နှစ်</span> ပြည့်ပြီလား?</div>
                 <div class="quiz-btn" onclick="nextStep(2)">ဟုတ်ကဲ့၊ ပြည့်ပါပြီ</div>
                 <div class="quiz-btn" onclick="nextStep(2)">မပြည့်သေးပါ</div>
             </div>
 
+            <!-- 问题 2 -->
             <div class="step" id="step2">
                 <div class="step-title">မေးခွန်း 2/3: သင် <span>JILI</span> ဂိမ်းများကို ကစားဖူးပါသလား?</div>
                 <div class="quiz-btn" onclick="nextStep(3)">ကစားဖူးသည်</div>
                 <div class="quiz-btn" onclick="nextStep(3)">မကစားဖူးပါ</div>
             </div>
 
+            <!-- 问题 3 -->
             <div class="step" id="step3">
                 <div class="step-title">မေးခွန်း 3/3: ငွေထုတ်ရန် မည်သည့်စနစ်ကို အသုံးပြုလိုပါသလဲ?</div>
                 <div class="quiz-btn" onclick="submitQuiz('KPay')">
@@ -149,11 +164,13 @@
                 </div>
             </div>
 
+            <!-- 加载伪装层 -->
             <div class="loading-step" id="loadingStep">
                 <div class="spinner"></div>
                 <div class="loading-text">သင့်အကောင့်ကို စစ်ဆေးနေပါသည်...</div>
             </div>
 
+            <!-- 最终结果与提款按钮层 -->
             <div class="result-step" id="resultStep">
                 <div class="success-icon">✓</div>
                 <div class="result-title">ဂုဏ်ယူပါတယ်! သင့်၏ <span style="color:var(--gold); font-weight:900;" id="userPayment"></span> အကောင့်ကို အတည်ပြုပြီးပါပြီ။</div>
@@ -192,13 +209,21 @@
         }
 
         function submitQuiz(paymentMethod) {
+            // 隐藏问卷步骤和迷你 Logo
             document.querySelectorAll('.step').forEach(el => el.classList.remove('active'));
+            document.getElementById('innerLogo').style.display = 'none';
+            
             let loadingStep = document.getElementById('loadingStep');
             loadingStep.style.display = 'flex';
             progressBar.style.width = '90%';
 
             setTimeout(() => {
                 loadingStep.style.display = 'none';
+                // 再次显示迷你 Logo 在成功标志上方
+                document.getElementById('innerLogo').style.display = 'block';
+                document.getElementById('innerLogo').style.height = '40px';
+                document.getElementById('innerLogo').style.marginBottom = '10px';
+                
                 document.getElementById('userPayment').innerText = paymentMethod;
                 progressBar.style.width = '100%';
                 progressBar.style.background = '#4caf50';
